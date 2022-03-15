@@ -40,7 +40,27 @@ namespace BasicDemo
             SalesManager sm = new SalesManager(10, "Rutik", 30000, 1000, 1500, 500);
             sm.calculatesalary();
             Console.WriteLine(sm);
-             
+
+
+            Console.WriteLine("=================Class calculation=================================");
+            Calculation c = new Calculation();
+            Console.WriteLine(c.Addition(10, 20,30));
+
+            Console.WriteLine("=================Employee Static=================================");
+
+            EmoloyeeStatic es = new EmoloyeeStatic("Ganesh",20000);
+            es.calculatesalary();
+            Console.WriteLine(es);
+
+            EmoloyeeStatic es1 = new EmoloyeeStatic("Raj",25000);
+            es1.calculatesalary();
+            Console.WriteLine(es1);
+
+            EmoloyeeStatic es2 = new EmoloyeeStatic("Shekhar",30000);
+            es2.calculatesalary();
+            Console.WriteLine(es2);
+
+            Console.WriteLine("Total Employees =" + EmoloyeeStatic.GetCount());
         }
     }
 }

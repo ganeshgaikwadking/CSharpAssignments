@@ -21,14 +21,14 @@ namespace BasicDemo
 
             this.foodallow = foodallow;
             this.ta = ta;
-            this.comission = com;
+            comission = com;
         }
         public override void calculatesalary()
         {
             hra = basicsalary * 0.40;
             da = basicsalary * 0.20;
             pf = basicsalary * 0.01;
-            grosssalary = (basicsalary + hra + da+foodallow+ta+comission) - pf;
+            grosssalary = (basicsalary + hra + da + foodallow + ta + comission ) - pf;
         }
         public override string ToString()
         {
