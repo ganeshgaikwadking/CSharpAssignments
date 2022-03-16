@@ -14,21 +14,33 @@ namespace BasicDemo
         static void Main(string[] args)
         {
 
-            List<ProductNew> productlist = new List<ProductNew>()
+            //List<ProductNew> productlist = new List<ProductNew>()
+            //{
+
+            //    new ProductNew(101,"Laptop",50000),
+            //    new ProductNew(102,"Mobile",25000),
+            //    new ProductNew(103,"tv",30000),
+
+
+            //};
+            //foreach (ProductNew p in productlist)
+            //{
+            //    Console.WriteLine(p);
+            //}
+
+            Hashtable hashtable = new Hashtable();
+            hashtable.Add(1, "India");
+            hashtable.Add(2, "America");
+            hashtable.Add(91, "Japan");
+
+            hashtable.Remove(91);
+
+
+            foreach(DictionaryEntry item in hashtable)
             {
 
-                new ProductNew(101,"Laptop",50000),
-                new ProductNew(102,"Mobile",25000),
-                new ProductNew(103,"tv",30000),
-
-
-            };
-            foreach (ProductNew p in productlist)
-            {
-                Console.WriteLine(p);
+                Console.WriteLine(item.Key + " " + item.Value);
             }
-
-
 
 
 
