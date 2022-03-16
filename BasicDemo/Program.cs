@@ -13,6 +13,30 @@ namespace BasicDemo
 
         static void Main(string[] args)
         {
+
+            List<ProductNew> productlist = new List<ProductNew>()
+            {
+
+                new ProductNew(101,"Laptop",50000),
+                new ProductNew(102,"Mobile",25000),
+                new ProductNew(103,"tv",30000),
+
+
+            };
+            foreach (ProductNew p in productlist)
+            {
+                Console.WriteLine(p);
+            }
+
+
+
+
+
+
+
+
+
+
             //Console.WriteLine("==========Stack===========");
             //Stack stack = new Stack();
             //stack.Push(10);
@@ -88,13 +112,13 @@ namespace BasicDemo
 
             //}
 
-            Product pd = new Product(10, "Vivo", 56000, 10);
-            pd.Discount();
-            Console.WriteLine(pd.ToString());
+            //Product pd = new Product(10, "Vivo", 56000, 10);
+            //pd.Discount();
+            //Console.WriteLine(pd.ToString());
 
-            Product pd1 = new Product();
+            //Product pd1 = new Product();
 
-            Console.WriteLine(pd1.ToString());
+            //Console.WriteLine(pd1.ToString());
 
 
             //    int[] rainfall = new int[5] { 115, 113, 111, 114, 112 };
