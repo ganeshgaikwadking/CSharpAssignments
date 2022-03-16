@@ -28,26 +28,56 @@ namespace BasicDemo
             //    Console.WriteLine(p);
             //}
 
-            Hashtable hashtable = new Hashtable();
-            hashtable.Add(1, "India");
-            hashtable.Add(2, "America");
-            hashtable.Add(91, "Japan");
+            //Hashtable hashtable = new Hashtable();
+            //hashtable.Add(1, "India");
+            //hashtable.Add(2, "America");
+            //hashtable.Add(91, "Japan");
 
-            hashtable.Remove(91);
+            //hashtable.Remove(91);
 
 
-            foreach(DictionaryEntry item in hashtable)
+            //foreach(DictionaryEntry item in hashtable)
+            //{
+
+            //    Console.WriteLine(item.Key + " " + item.Value);
+            //}
+
+            Console.WriteLine("===========Stack using Generic===================");
+            Stack<String> stack = new Stack<string>();
+            stack.Push("Tv");
+            stack.Push("Mobile");
+            stack.Push("Laptop");
+            stack.Push("Pc");
+
+            foreach (string item in stack)
             {
 
-                Console.WriteLine(item.Key + " " + item.Value);
+                Console.WriteLine(item);
             }
 
+            Console.WriteLine("===========Queue using Generic===================");
+            Queue<Double> queue = new Queue<Double>();
+            queue.Enqueue(1.1);
+            queue.Enqueue(5.1);
+            queue.Enqueue(6.5);
+            queue.Enqueue(10.5);
 
+            foreach (Double qu in queue)
+            {
 
+                Console.WriteLine(qu);
+            }
+            Console.WriteLine("===========Dictionary using Generic===================");
+            Dictionary<int, Double> dictonary = new Dictionary<int, Double>();
+            dictonary.Add(1, 23.22);
+            dictonary.Add(4, 45.22);
+            dictonary.Add(7, 63.22);
+            dictonary.Add(9, 23.22);
 
-
-
-
+            foreach(KeyValuePair<int, Double> item in dictonary)
+            {
+                Console.WriteLine(item.Key + " " + item.Value);
+            }
 
             //Console.WriteLine("==========Stack===========");
             //Stack stack = new Stack();
