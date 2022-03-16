@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,62 +13,145 @@ namespace BasicDemo
 
         static void Main(string[] args)
         {
+            //Console.WriteLine("==========Stack===========");
+            //Stack stack = new Stack();
+            //stack.Push(10);
+            //stack.Push(60);
+            //stack.Push(30);
+            //stack.Push("Ganesh");
+            //stack.Push(1.55);
 
-            int[] rainfall = new int[5] { 115, 113, 111, 114, 112 };
-            int[] list1 = new int[3];
-            string[] names = { "Tushar", "Rahul", "Ganesh", "Sameer" };
+            //stack.Pop();
+            //foreach (object item in stack)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            Console.WriteLine("=============Printing Array============");
+            //Console.WriteLine("==========Queue===========");
 
-            for (int i = 0; i < rainfall.Length; i++)
-            {
-                Console.WriteLine(rainfall[i]);
+            //Queue queue = new Queue();
+            //queue.Enqueue(101);
+            //queue.Enqueue(105);
+            //queue.Enqueue(107);
+            //queue.Enqueue("Raj");
+            //queue.Enqueue(109);
+            //queue.Enqueue("Viraj");
+            //queue.Enqueue(110);
 
-            }
+            //queue.Dequeue();
+            //foreach (object item in queue)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            Array.Copy(rainfall, 1, list1, 0, 3);
+            //ArrayList list = new ArrayList();
 
-            Console.WriteLine("=============Copied Data============");
-            for (int i = 0; i < rainfall.Length; i++)
-            {
-                Console.WriteLine(rainfall[i]);
-            }
+            //list.Add(20);
+            //list.Add(30);
+            //list.Add(40);
+            //list.Add(50);
+            //list.Add("ganesh");
+            //list.Add("Test");
 
-            Array.Sort(rainfall);
-            Console.WriteLine("==============After Sort============");
-
-            for (int i = 0; i < rainfall.Length; i++)
-            {
-                Console.WriteLine(rainfall[i]);
-            }
-
-            Console.WriteLine("==============Clear Array ============");
-
-            Array.Clear(rainfall, 0, rainfall.Length);
- 
-
-            foreach (int val in rainfall)
-            {
-                Console.WriteLine(val);
-            }
-
-            Console.WriteLine("=========Printing String Array ==========");
-            names.ToList().ForEach(i => Console.WriteLine(i.ToString()));
+            //list.Insert(2, 5);
 
 
-            Console.WriteLine("=========String Reverse ==========");
 
-            Array.Reverse(names);
+            //list.Remove(40);
+            //list.RemoveAt(3);
+            //Console.WriteLine("Count " + list.Count);
 
-            // Displays the values of the Array.
-            Console.WriteLine("After reversing:");
-            PrintIndexAndValues(names);
-        }
+            //foreach(object item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-        private static void PrintIndexAndValues(Array myArray)
-        {
-            for (int i = myArray.GetLowerBound(0); i <= myArray.GetUpperBound(0); i++)
-                Console.WriteLine("\t[{0}]:\t{1}", i, myArray.GetValue(i));
+
+            //int[,] list = new int[6, 3]
+            //{
+            //    { 101,102,103},
+            //    { 101,102,103},
+            //    { 101,102,103},
+            //    { 101,102,103},
+            //    { 101,102,103},
+            //    { 101,102,103}
+
+            //};
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Console.Write(list[i, j] + " ");
+
+            //    }
+            //    Console.WriteLine();
+
+            //}
+
+            Product pd = new Product(10, "Vivo", 56000, 10);
+            pd.Discount();
+            Console.WriteLine(pd.ToString());
+
+            Product pd1 = new Product();
+
+            Console.WriteLine(pd1.ToString());
+
+
+            //    int[] rainfall = new int[5] { 115, 113, 111, 114, 112 };
+            //    int[] list1 = new int[3];
+            //    string[] names = { "Tushar", "Rahul", "Ganesh", "Sameer" };
+
+            //    Console.WriteLine("=============Printing Array============");
+
+            //    for (int i = 0; i < rainfall.Length; i++)
+            //    {
+            //        Console.WriteLine(rainfall[i]);
+
+            //    }
+
+            //    Array.Copy(rainfall, 1, list1, 0, 3);
+
+            //    Console.WriteLine("=============Copied Data============");
+            //    for (int i = 0; i < rainfall.Length; i++)
+            //    {
+            //        Console.WriteLine(rainfall[i]);
+            //    }
+
+            //    Array.Sort(rainfall);
+            //    Console.WriteLine("==============After Sort============");
+
+            //    for (int i = 0; i < rainfall.Length; i++)
+            //    {
+            //        Console.WriteLine(rainfall[i]);
+            //    }
+
+            //    Console.WriteLine("==============Clear Array ============");
+
+            //    Array.Clear(rainfall, 0, rainfall.Length);
+
+
+            //    foreach (int val in rainfall)
+            //    {
+            //        Console.WriteLine(val);
+            //    }
+
+            //    Console.WriteLine("=========Printing String Array ==========");
+            //    names.ToList().ForEach(i => Console.WriteLine(i.ToString()));
+
+
+            //    Console.WriteLine("=========String Reverse ==========");
+
+            //    Array.Reverse(names);
+
+            //    // Displays the values of the Array.
+            //    Console.WriteLine("After reversing:");
+            //    PrintIndexAndValues(names);
+            //}
+
+            //private static void PrintIndexAndValues(Array myArray)
+            //{
+            //    for (int i = myArray.GetLowerBound(0); i <= myArray.GetUpperBound(0); i++)
+            //        Console.WriteLine("\t[{0}]:\t{1}", i, myArray.GetValue(i));
 
 
             //Department department = new Department();
