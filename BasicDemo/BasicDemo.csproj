@@ -48,6 +48,7 @@
     <Compile Include="EmoloyeeStatic.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="MyGeneric.cs" />
+    <Compile Include="NameException.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductNew.cs" />
     <Compile Include="Program.cs" />

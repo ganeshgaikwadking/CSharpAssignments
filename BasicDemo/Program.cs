@@ -27,13 +27,23 @@ namespace BasicDemo
         //}
         static void Main(string[] args)
         {
+            Voter v = new Voter();
+            try
+            {
+                string name = v.AcceptName("");
+                Console.WriteLine("Name" + name);
 
-            int a = 40, b = 60;
-            int add, sub, multiply;
-            Calculation(a, b, out add, out sub, out multiply);
-            Console.WriteLine(add);
-            Console.WriteLine(sub);
-            Console.WriteLine(multiply);
+            }
+            catch(NameException ex)
+            { 
+            Console.WriteLine(ex.Message);
+            }
+            //int a = 40, b = 60;
+            //int add, sub, multiply;
+            //Calculation(a, b, out add, out sub, out multiply);
+            //Console.WriteLine(add);
+            //Console.WriteLine(sub);
+            //Console.WriteLine(multiply);
 
             //Rectangle re = new Rectangle(10,10);
             //re.CalculateArea();
