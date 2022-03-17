@@ -9,10 +9,50 @@ namespace BasicDemo
 {
     class Program
     {
+        static void Calculation(int n1, int n2, out int add, out int sub, out int multiply)
+        {
+            add = n1 + n2;
+            sub = n1 - n2;
+            multiply = n1 * n2;
 
+        }
 
+        //static void Swap<T>(ref T n1,ref T n2)
+        //{
+
+        //    T temp;
+        //    temp = n1;
+        //    n1 = n2;
+        //    n2 = temp;
+        //}
         static void Main(string[] args)
         {
+
+            int a = 40, b = 60;
+            int add, sub, multiply;
+            Calculation(a, b, out add, out sub, out multiply);
+            Console.WriteLine(add);
+            Console.WriteLine(sub);
+            Console.WriteLine(multiply);
+
+            //Rectangle re = new Rectangle(10,10);
+            //re.CalculateArea();
+            //Console.WriteLine(re.ToString());
+
+
+            //int a = 10, b = 20;
+
+            //Swap<int>(ref a, ref b);
+            //Console.WriteLine(a + " " + b);
+
+            //MyGeneric<int> obj = new MyGeneric<int>(10);
+            //Console.WriteLine(obj.GetData());
+
+            //ProductNew pd = new ProductNew(1, "Laptop", 4000);
+            //MyGeneric<ProductNew> obj2 = new MyGeneric<ProductNew>(pd);
+            //Console.WriteLine(obj2.GetData());
+
+
 
             //List<ProductNew> productlist = new List<ProductNew>()
             //{
@@ -42,42 +82,42 @@ namespace BasicDemo
             //    Console.WriteLine(item.Key + " " + item.Value);
             //}
 
-            Console.WriteLine("===========Stack using Generic===================");
-            Stack<String> stack = new Stack<string>();
-            stack.Push("Tv");
-            stack.Push("Mobile");
-            stack.Push("Laptop");
-            stack.Push("Pc");
+            //Console.WriteLine("===========Stack using Generic===================");
+            //Stack<String> stack = new Stack<string>();
+            //stack.Push("Tv");
+            //stack.Push("Mobile");
+            //stack.Push("Laptop");
+            //stack.Push("Pc");
 
-            foreach (string item in stack)
-            {
+            //foreach (string item in stack)
+            //{
 
-                Console.WriteLine(item);
-            }
+            //    Console.WriteLine(item);
+            //}
 
-            Console.WriteLine("===========Queue using Generic===================");
-            Queue<Double> queue = new Queue<Double>();
-            queue.Enqueue(1.1);
-            queue.Enqueue(5.1);
-            queue.Enqueue(6.5);
-            queue.Enqueue(10.5);
+            //Console.WriteLine("===========Queue using Generic===================");
+            //Queue<Double> queue = new Queue<Double>();
+            //queue.Enqueue(1.1);
+            //queue.Enqueue(5.1);
+            //queue.Enqueue(6.5);
+            //queue.Enqueue(10.5);
 
-            foreach (Double qu in queue)
-            {
+            //foreach (Double qu in queue)
+            //{
 
-                Console.WriteLine(qu);
-            }
-            Console.WriteLine("===========Dictionary using Generic===================");
-            Dictionary<int, Double> dictonary = new Dictionary<int, Double>();
-            dictonary.Add(1, 23.22);
-            dictonary.Add(4, 45.22);
-            dictonary.Add(7, 63.22);
-            dictonary.Add(9, 23.22);
+            //    Console.WriteLine(qu);
+            //}
+            //Console.WriteLine("===========Dictionary using Generic===================");
+            //Dictionary<int, Double> dictonary = new Dictionary<int, Double>();
+            //dictonary.Add(1, 23.22);
+            //dictonary.Add(4, 45.22);
+            //dictonary.Add(7, 63.22);
+            //dictonary.Add(9, 23.22);
 
-            foreach(KeyValuePair<int, Double> item in dictonary)
-            {
-                Console.WriteLine(item.Key + " " + item.Value);
-            }
+            //foreach(KeyValuePair<int, Double> item in dictonary)
+            //{
+            //    Console.WriteLine(item.Key + " " + item.Value);
+            //}
 
             //Console.WriteLine("==========Stack===========");
             //Stack stack = new Stack();
