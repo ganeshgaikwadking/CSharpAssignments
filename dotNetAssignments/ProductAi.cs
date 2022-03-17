@@ -8,21 +8,47 @@ namespace dotNetAssignments
 {
     public class ProductAi
     {
-        private int id;
-        private string name;
 
-        public int Id
+        static int count;
+        protected int id;
+       protected string name;
+
+        public ProductAi()
         {
-            set { id = value; }
-            get { return id; }
+            count++;
+            id = 11;
+            name = "mobile";
+
+            count++;
+            id = 12;
+            name = "Laptop";
+
+            count++;
+            id = 13;
+            name = "Tv";
+
+            count++;
+            id = 14;
+            name = "Pc";
+
         }
-        public string Name
+        public ProductAi(int Coun,int idd,string nm)
         {
-            set { name = value; }
-            get { return name; }
+            count = Coun;
+            id = idd;
+            name = nm;
+
+        }
+        public static int Getcount()
+        {
+            return count;
+        }
+        public override string ToString()
+        {
+            return "Count=" + count+  ":: " + " id= " + id +":: " + " Name= " + name;
         }
 
-          
-         
+
+
     }
 }

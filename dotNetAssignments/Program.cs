@@ -83,10 +83,26 @@ namespace dotNetAssignments
             Console.WriteLine("==========Product with AutoIncreament Assignment=============");
 
             ProductAi pa = new ProductAi();
-            pa.Id = 1;
-            pa.Name = "Mobile";
-            Console.WriteLine(pa.Id + pa.Name);
+            Console.WriteLine(pa.ToString());
 
+         
+
+            Console.WriteLine("==========Delegate Assignment=============");
+
+            DelegationAssingment del = new DelegationAssingment();
+            StrDel mydel = new StrDel(del.AcceptString1);
+            mydel += new StrDel(del.AcceptString2);
+
+            Delegate[] list = mydel.GetInvocationList();
+              foreach(Delegate item in list)
+            {
+
+                Console.WriteLine(item.Method);
+                Console.WriteLine(item.DynamicInvoke("Ganesh"));
+            }
+
+
+            
         }
     }
 }

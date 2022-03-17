@@ -9,13 +9,13 @@ namespace BasicDemo
 {
     class Program
     {
-        static void Calculation(int n1, int n2, out int add, out int sub, out int multiply)
-        {
-            add = n1 + n2;
-            sub = n1 - n2;
-            multiply = n1 * n2;
+        //    static void Calculation(int n1, int n2, out int add, out int sub, out int multiply)
+        //    {
+        //        add = n1 + n2;
+        //        sub = n1 - n2;
+        //        multiply = n1 * n2;
 
-        }
+        //    }
 
         //static void Swap<T>(ref T n1,ref T n2)
         //{
@@ -27,30 +27,43 @@ namespace BasicDemo
         //}
         static void Main(string[] args)
         {
-            Voter v = new Voter();
-            try
-            {
-                string name = v.AcceptName("");
-                Console.WriteLine("Name" + name);
+            Calculation c = new Calculation();
+            MyDelegate mydel = new MyDelegate(c.Addition);
+            
+            int result = mydel.Invoke(20, 10);
+            Console.WriteLine(result);
 
-            }
-            catch (NameException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
 
-            user us = new user();
-            try
-            {
-                int age =us.AcceptAge(22);
-                Console.WriteLine("This user is valid for vote" + age);
+
+            Test t = new Test();
+            MyStrDel del = new MyStrDel(t.AcceptName);
+            Console.WriteLine(del.Invoke("Ganesh"));
+
+
+            //Voter v = new Voter();
+            //try
+            //{
+            //    string name = v.AcceptName("");
+            //    Console.WriteLine("Name" + name);
+
+            //}
+            //catch (NameException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            //user us = new user();
+            //try
+            //{
+            //    int age =us.AcceptAge(22);
+            //    Console.WriteLine("This user is valid for vote" + age);
 
                   
-            }
-            catch(AgeException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //}
+            //catch(AgeException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
             //int a = 40, b = 60;
             //int add, sub, multiply;
             //Calculation(a, b, out add, out sub, out multiply);

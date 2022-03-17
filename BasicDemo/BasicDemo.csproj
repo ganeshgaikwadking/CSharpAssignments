@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AgeException.cs" />
     <Compile Include="Calculation.cs" />
+    <Compile Include="CalculationDelegates.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="EmoloyeeStatic.cs" />
     <Compile Include="Employee.cs" />
