@@ -34,9 +34,22 @@ namespace BasicDemo
                 Console.WriteLine("Name" + name);
 
             }
-            catch(NameException ex)
-            { 
-            Console.WriteLine(ex.Message);
+            catch (NameException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            user us = new user();
+            try
+            {
+                int age =us.AcceptAge(22);
+                Console.WriteLine("This user is valid for vote" + age);
+
+                  
+            }
+            catch(AgeException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             //int a = 40, b = 60;
             //int add, sub, multiply;
