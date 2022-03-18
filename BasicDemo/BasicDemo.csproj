@@ -58,6 +58,7 @@
     <Compile Include="SalesManager.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentDel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

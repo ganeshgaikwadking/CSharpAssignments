@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace BasicDemo
 {
+    public delegate void DisplayMsg();
     class Program
     {
+        static void FailMsg()
+        {
+            Console.WriteLine("You are Failed.........");
+        }
+        static void PassMsg()
+        {
+            Console.WriteLine("Congrats You Are Pass.....");
+        }
         //    static void Calculation(int n1, int n2, out int add, out int sub, out int multiply)
         //    {
         //        add = n1 + n2;
@@ -27,17 +36,23 @@ namespace BasicDemo
         //}
         static void Main(string[] args)
         {
-            Calculation c = new Calculation();
-            MyDelegate mydel = new MyDelegate(c.Addition);
-            
-            int result = mydel.Invoke(20, 10);
-            Console.WriteLine(result);
+            StudentDel std = new StudentDel();
+            std.FailEvent += new DisplayMsg(FailMsg);
+            std.PassEvent += new DisplayMsg(PassMsg);
+            std.AcceptMarks(50);
+
+
+            //    Calculation c = new Calculation();
+            //    MyDelegate mydel = new MyDelegate(c.Addition);
+
+            //    int result = mydel.Invoke(20, 10);
+            //    Console.WriteLine(result);
 
 
 
-            Test t = new Test();
-            MyStrDel del = new MyStrDel(t.AcceptName);
-            Console.WriteLine(del.Invoke("Ganesh"));
+            //    Test t = new Test();
+            //    MyStrDel del = new MyStrDel(t.AcceptName);
+            //    Console.WriteLine(del.Invoke("Ganesh"));
 
 
             //Voter v = new Voter();
@@ -58,7 +73,7 @@ namespace BasicDemo
             //    int age =us.AcceptAge(22);
             //    Console.WriteLine("This user is valid for vote" + age);
 
-                  
+
             //}
             //catch(AgeException ex)
             //{

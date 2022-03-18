@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace dotNetAssignments
 {
+    public delegate void ErrorDelegate();
     class Program
     {
+        static void errorMsg()
+        {
+            Console.WriteLine("This user not valid");
+        }
+       
         static void Main(string[] args)
         {
             Console.WriteLine("==========Customer Assignment=============");
@@ -101,8 +107,16 @@ namespace dotNetAssignments
                 Console.WriteLine(item.DynamicInvoke("Ganesh"));
             }
 
+            Console.WriteLine("==========Age Event =============");
+            User user = new User();
+            user.AgeEvent += new ErrorDelegate(errorMsg);
+            int age = user.AcceptAge(12);
+            Console.WriteLine("Your age is " + age);
+           
 
-            
+
+
+
         }
     }
 }
